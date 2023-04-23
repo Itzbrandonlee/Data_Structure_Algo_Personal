@@ -2,7 +2,7 @@ package recursion;
 
 public class Factorial {
     //recursive
-    public int findFactorialRecursive(int number){
+    public int findFactorialRecursive(int number){ //O(n)
 
         if(number == 1){
             return 1;
@@ -11,13 +11,15 @@ public class Factorial {
         return number * findFactorialRecursive(number - 1);
     }
     //iterative
-    public int findFactorialIterative(int number){
+    public int findFactorialIterative(int number){ //O(n)
         int result = 1;
         for(int i=number; i > 0; i--){
             result *= i;
         }
         return result;
     }
+
+    //both use a fact speed O notation. Recursion is more readable
 
     public static void main(String[] args) {
         Factorial factorial = new Factorial();
